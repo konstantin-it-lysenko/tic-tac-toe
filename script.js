@@ -68,4 +68,3 @@ function resetGame() {
     historyO = [];
     player = 'X';
 }
-
