@@ -1,4 +1,5 @@
 const content = document.querySelector('.js-content');
+const winner = document.querySelector('.js-winner');
 let player = 'X';
 let historyX = [];
 let historyO = [];
@@ -46,12 +47,20 @@ function onClick(e) {
     target.textContent = player;
 
     if (result) {
-        console.log(`Winner ${player}`);
-        resetGame();
+        winner.textContent = `Winner ${player}`;
+
+        setTimeout(() => {
+            resetGame()
+        }, 2000);
+
         return;
     } else if (isEndGame) {
-        console.log(`Draw, try again`);
-        resetGame();
+        winner.textContent = `Draw, try again`;
+
+        setTimeout(() => {
+            resetGame()
+        }, 200);
+
         return;
     }
 
