@@ -59,7 +59,7 @@ function onClick(e) {
 
         setTimeout(() => {
             resetGame()
-        }, 200);
+        }, 2000);
 
         return;
     }
